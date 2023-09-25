@@ -8,7 +8,7 @@ var isAnagram = function(s, t) {
             else{
                 map[letter] = 1; 
             }
-        }
+        } 
         return map;
     };
      

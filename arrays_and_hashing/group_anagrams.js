@@ -63,62 +63,73 @@
 // console.log(groupAnagrams(["eat","tea","tan","ate","nat","bat"]));
 
 
-var groupAnagrams = function(strs){  
-    const countHashMap  = (temp) =>{
-        const map = {}; 
-        for(const letter of temp){
-            if(map[letter]){ 
-                map[letter]++;
-            }
-            else{
-                map[letter] = 1; 
-            }
-        }
-        return map;
-    };
+// var groupAnagrams = function(strs){   second not efficient solution
+//     const countHashMap  = (temp) =>{
+//         const map = {}; 
+//         for(const letter of temp){
+//             if(map[letter]){ 
+//                 map[letter]++;
+//             }
+//             else{
+//                 map[letter] = 1; 
+//             }
+//         }
+//         return map;
+//     };
 
-    const isAnagram = (val1,val2) =>{
-        const map1 = countHashMap(val1);
-        const map2 = countHashMap(val2); 
-        const keys1 = Object.keys(map1);
-        const keys2 = Object.keys(map2); 
+//     const isAnagram = (val1,val2) =>{
+//         const map1 = countHashMap(val1);
+//         const map2 = countHashMap(val2); 
+//         const keys1 = Object.keys(map1);
+//         const keys2 = Object.keys(map2); 
         
-        if(keys1.length == keys2.length){  
-            for(const key of keys1){
-                if(map1[key] != map2[key]){
-                    return false;
-               }         
-            }
-            return true;
-        }
-        else{
-            return false;
-        }
-    };
+//         if(keys1.length == keys2.length){  
+//             for(const key of keys1){
+//                 if(map1[key] != map2[key]){
+//                     return false;
+//                }         
+//             }
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     };
 
-    const values = [];
-     
-    const ret_arr = [];
-    
-    for(let i=0; i<strs.length; i++){
-        const temp = [];
-        if(values.indexOf(strs[i])==-1){
-            values.push(strs[i]); 
-            temp.push(strs[i]);
-        }
-        for(let j=i+1; j<strs.length; j++){
-            if((isAnagram(strs[i],strs[j])&&values.indexOf(strs[j])==-1) || (isAnagram(strs[i],strs[j])&&strs[i]===strs[j]
-            // && one more condition in case of ["","",""]
-            )){ 
-                values.push(strs[j]);
-                temp.push(strs[j]);
-            }
-        }
-        if(temp.length){
-            ret_arr.push(temp);
-        }
-    } 
-    return ret_arr;    
-}
+//     const values = [];
+//     const ret_arr = [];
+//     const map_strs = countHashMap(strs); 
 
-console.log(groupAnagrams(["",""])); //interesting case
+//     for(let i=0; i<strs.length; i++){
+//         const temp = [];
+//         if(values.indexOf(strs[i])==-1){
+//             values.push(strs[i]); 
+//             temp.push(strs[i]);
+//         }
+//         for(let j=i+1; j<strs.length; j++){
+//             if((isAnagram(strs[i],strs[j])) || (strs[i]===strs[j])){ 
+//                 if(strs[i] == 'dis' && strs[j] == 'sid'){
+//                     console.log("elo")
+//                 }
+//                 values.push(strs[j]);
+//                 temp.push(strs[j]);
+//             }
+//         }
+//         if(temp.length){ 
+//             // console.log(temp);
+//             const temp_map = countHashMap(values);
+//             if(temp_map[temp[temp.length-1]] <= map_strs[temp[temp.length -1 ]]){
+//                 ret_arr.push(temp);
+//             }
+//         }
+//     } 
+//     return ret_arr;    
+// }
+
+// console.log(groupAnagrams(["rag","orr","err","bad","foe","ivy","tho","gem","len","cat","ron","ump","nev","cam","pen","dis","rob","tex","sin","col","buy","say","big","wed","eco","bet","fog","buy","san","kid","lox","sen","ani","mac","eta","wis","pot","sid","dot","ham","gay","oar","sid","had","paw","sod","sop"]));
+// console.log(groupAnagrams(["stop","pots","reed","","tops","deer","opts",""]
+// )); //interesting case
+
+// console.log(groupAnagrams(["","",""])); 
+// console.log(groupAnagrams(["tea","","eat","","tea",""]));
+
