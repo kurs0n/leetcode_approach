@@ -155,5 +155,4 @@ var groupAnagrams = function(strs){
 }
 
 console.log(groupAnagrams(["ivy","hop","dug","chi","tub","man","yak","pub","son","ohm","gut","hem","pub","gad","hew","bit","arm","vat","sop","nan","dot","fdr","tad","big","her","yea","sis"]
-
 ));
