@@ -133,3 +133,27 @@
 // console.log(groupAnagrams(["","",""])); 
 // console.log(groupAnagrams(["tea","","eat","","tea",""]));
 
+
+var groupAnagrams = function(strs){  
+    const ans = {};
+    for(const str of strs){
+        const arr = new Array(26).fill(0);
+        for(const c of str){  
+            const key= (c.charCodeAt(0)-"a".charCodeAt(0));
+            arr[key]+=1;
+        }
+        const key = JSON.stringify(arr);
+        if(ans[key]){
+            ans[key].push(str);
+        }
+        else {
+            ans[key] = [];
+            ans[key].push(str); 
+        }
+    }
+    return [...Object.values(ans)]
+}
+
+console.log(groupAnagrams(["ivy","hop","dug","chi","tub","man","yak","pub","son","ohm","gut","hem","pub","gad","hew","bit","arm","vat","sop","nan","dot","fdr","tad","big","her","yea","sis"]
+
+));
