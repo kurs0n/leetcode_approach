@@ -14,7 +14,7 @@ function isPalindrome(s: string): boolean {
             string_copy[i] = temp;
             i++;
             j--;
-        } 
+        }
         
         return string_copy.join("");
     };
