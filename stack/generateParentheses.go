@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // left -> (, right -> )
 // 0,0
 // 1,0 -> (    -->  // 1,1 --> ()
@@ -30,8 +28,4 @@ func generateParenthesis(n int) []string {
 	backtrack(0, 0, "", &res, n)
 
 	return res
-}
-
-func main() {
-	fmt.Println(generateParenthesis(3))
 }
