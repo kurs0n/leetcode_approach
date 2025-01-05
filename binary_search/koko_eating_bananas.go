@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"slices"
 )
@@ -25,10 +24,4 @@ func minEatingSpeed(piles []int, h int) int {
 	}
 
 	return minSpeed
-}
-
-func main() {
-	fmt.Println(minEatingSpeed([]int{3, 6, 7, 11}, 8))
-	fmt.Println(minEatingSpeed([]int{312884470}, 312884469))
-	fmt.Println(minEatingSpeed([]int{312884470}, 968709470))
 }
