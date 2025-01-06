@@ -1,6 +1,6 @@
 package main
 
-func search(nums []int, target int) int {
+func searchBinary(nums []int, target int) int {
 	left := 0
 	right := len(nums) - 1
 	mid := right / 2

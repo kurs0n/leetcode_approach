@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func findMin(nums []int) int {
 	left := 0
 	right := len(nums) - 1
@@ -18,8 +16,8 @@ func findMin(nums []int) int {
 	return nums[left]
 }
 
-func main() {
-	fmt.Println(findMin([]int{1, 2}))
-	fmt.Println(findMin([]int{3, 4, 5, 1, 2}))
-	fmt.Println(findMin([]int{4, 5, 6, 7, 0, 1, 2}))
-}
+// func main() {
+// 	fmt.Println(findMin([]int{1, 2}))
+// 	fmt.Println(findMin([]int{3, 4, 5, 1, 2}))
+// 	fmt.Println(findMin([]int{4, 5, 6, 7, 0, 1, 2}))
+// }
