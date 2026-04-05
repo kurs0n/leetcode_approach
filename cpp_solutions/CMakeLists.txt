@@ -9,6 +9,7 @@ include_directories(lib/two-sum2)
 include_directories(lib/reverse-linked-list)
 include_directories(lib/listnode)
 include_directories(lib/merge-two-sorted-list)
+include_directories(lib/has-cycle)
 
 set (SOURCES 
     src/main.cpp
@@ -24,6 +25,7 @@ add_executable(run_opt_tests
     lib/two-sum2/two-sum2.cpp tests/utest-two-sum2.cpp
     lib/reverse-linked-list/reverse-linked-list.cpp tests/utest-reverse-linked-list.cpp
     lib/merge-two-sorted-list/merge-two-sorted-list.cpp tests/utest-merge-two-sorted-list.cpp
+    lib/has-cycle/has-cycle.cpp tests/utest-has-cycle.cpp
 )
 
 target_link_libraries(run_opt_tests 
