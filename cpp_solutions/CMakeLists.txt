@@ -10,6 +10,8 @@ include_directories(lib/reverse-linked-list)
 include_directories(lib/listnode)
 include_directories(lib/merge-two-sorted-list)
 include_directories(lib/has-cycle)
+include_directories(lib/common)
+include_directories(lib/reorder-list)
 
 set (SOURCES 
     src/main.cpp
@@ -26,6 +28,8 @@ add_executable(run_opt_tests
     lib/reverse-linked-list/reverse-linked-list.cpp tests/utest-reverse-linked-list.cpp
     lib/merge-two-sorted-list/merge-two-sorted-list.cpp tests/utest-merge-two-sorted-list.cpp
     lib/has-cycle/has-cycle.cpp tests/utest-has-cycle.cpp
+    lib/common/list_utils.cpp tests/utest-list_utils.cpp
+    lib/reorder-list/reorder-list.cpp tests/utest-reorder-list.cpp
 )
 
 target_link_libraries(run_opt_tests 
