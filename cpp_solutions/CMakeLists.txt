@@ -12,6 +12,7 @@ include_directories(lib/merge-two-sorted-list)
 include_directories(lib/has-cycle)
 include_directories(lib/common)
 include_directories(lib/reorder-list)
+include_directories(lib/bubble-sort)
 
 set (SOURCES 
     src/main.cpp
@@ -29,7 +30,8 @@ add_executable(run_opt_tests
     lib/merge-two-sorted-list/merge-two-sorted-list.cpp tests/utest-merge-two-sorted-list.cpp
     lib/has-cycle/has-cycle.cpp tests/utest-has-cycle.cpp
     lib/common/list_utils.cpp tests/utest-list_utils.cpp
-    lib/reorder-list/reorder-list.cpp tests/utest-reorder-list.cpp
+    lib/reorder-list/reorder-list.cpp tests/utest-reorder-list.cpp 
+    lib/bubble-sort/bubble-sort.cpp tests/utest-bubble-sort.cpp
 )
 
 target_link_libraries(run_opt_tests 
