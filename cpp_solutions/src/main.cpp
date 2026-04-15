@@ -1,4 +1,11 @@
-#include <iostream>
-int main(){ 
+#include <stdio.h>
 
+int main() {
+    int x = 5;
+    int *p = &x;
+
+    printf("%d\n", *p++);
+    printf("%d\n", *p);
+
+    return 0;
 }

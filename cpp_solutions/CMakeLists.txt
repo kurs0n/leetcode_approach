@@ -15,6 +15,7 @@ include_directories(lib/reorder-list)
 include_directories(lib/bubble-sort)
 include_directories(lib/merge-two-sorted-arrays)
 include_directories(lib/binary-search)
+include_directories(lib/reverseByte)
 
 set (SOURCES 
     src/main.cpp
@@ -36,6 +37,7 @@ add_executable(run_opt_tests
     lib/bubble-sort/bubble-sort.cpp tests/utest-bubble-sort.cpp
     lib/merge-two-sorted-arrays/merge-two-sorted-arrays.cpp tests/utest-merge-two-sorted-arrays.cpp
     lib/binary-search/binary-search.cpp tests/utest-binary-search.cpp
+    lib/reverseByte/reverseByte.cpp tests/utest-reverse-byte.cpp
 )
 
 target_link_libraries(run_opt_tests 
